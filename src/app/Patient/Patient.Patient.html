@@ -1,0 +1,16 @@
+Patient Name :- <input [(ngModel)]="patientObj.name" type="text"/><br>
+Patient Address :- <input [(ngModel)]="patientObj.address" type="text"/><br>
+<input (click)="AddPatient()" type="button" value="save"/><br>
+
+<b>{{patientObj.name}}</b><br>
+{{patientObj.address}}
+<table border="1">
+  <tr>
+    <td>name</td>
+    <td>address</td>
+  </tr>
+  <tr *ngFor="let temp of patientObjs">
+    <td>{{temp.name}}</td>
+    <td>{{temp.address}}</td>
+  </tr>
+</table>
