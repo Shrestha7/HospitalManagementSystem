@@ -12,7 +12,18 @@ export class PatientComponent {
 
   AddPatient(){
     // take current object and add to patientObjs collection
+    this.patientObj.index =this.patientObjs.length;
     this.patientObjs.push(this.patientObj);
     this.patientObj = new Patient(); // create new object of patient
+  }
+  EditPatient(_patientObj:Patient){
+    var pat:Patient = new Patient();
+    pat.name =_patientObj.name;
+    pat.address= _patientObj.address;
+    this.patientObj = pat;
+  }
+
+  UpdatePatient(){
+
   }
 }
