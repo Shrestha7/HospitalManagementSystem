@@ -18,12 +18,16 @@ export class PatientComponent {
   }
   EditPatient(_patientObj:Patient){
     var pat:Patient = new Patient();
+    pat.index = _patientObj.index;
     pat.name =_patientObj.name;
     pat.address= _patientObj.address;
     this.patientObj = pat;
   }
 
   UpdatePatient(){
-
+    var patedit:Patient = this.patientObjs[this.patientObj.index];
+    patedit.name =this.patientObj.name;
+    patedit.address =this.patientObj.address;
+    this.patientObj =new Patient();
   }
 }

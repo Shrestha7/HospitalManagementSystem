@@ -9,10 +9,12 @@ Patient Address :- <input [(ngModel)]="patientObj.address" type="text"/><br>
     <td>name</td>
     <td>address</td>
     <td>Edit</td>
+    <td>Update</td>
   </tr>
   <tr *ngFor="let temp of patientObjs">
     <td>{{temp.name}}</td>
     <td>{{temp.address}}</td>
     <td><a href="javascript:void(0);" (click)="EditPatient(temp)">Edit</a></td>
+    <td><a href="javascript:void(0);" (click)="UpdatePatient()">Update</a></td>
   </tr>
 </table>
